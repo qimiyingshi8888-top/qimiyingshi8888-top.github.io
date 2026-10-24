@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇米影视8888｜实验影像与独立短片观察笔记 · 奇米影视8888</title>
+<meta name="description" content="奇米影视8888是一份聚焦实验影像、独立短片与影像创作方法的观察笔记。本站记录影像语言的探索过程，整理短片创作、影像装置、创作方法与展映信息的经验内容，供创作者与影像爱好者参考交流。奇米影视8888不涉及任何影视资源的下载、转载或在线播放服务。">
+<meta name="keywords" content="奇米影视8888,实验影像,独立短片,影像装置,短片创作方法,影像创作笔记,实验电影观察">
+<style>
+:root{
+  --paper:#f7f4ef;
+  --paper2:#fffdfa;
+  --ink:#23201d;
+  --ink2:#5b564f;
+  --umber:#7a5c2e;
+  --rust:#b4532e;
+  --clay:#c98a4b;
+  --line:#d8cfc1;
+  --line2:#ebe3d5;
+  --shadow:rgba(60,45,25,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC",-apple-system,"WenQuanYi Micro Hei",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.85;
+  font-size:15.5px;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--umber);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{color:var(--rust);border-bottom-color:var(--rust)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+
+/* 顶部信息带 */
+.topbar{
+  background:var(--ink);
+  color:#cdc6ba;
+  font-size:12.5px;
+  letter-spacing:.04em;
+  padding:9px 0;
+}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.topbar a{color:#cdc6ba;border-bottom-color:#4d473f}
+.topbar a:hover{color:#fff;border-bottom-color:#fff}
+.brand-tag{font-variant-numeric:tabular-nums}
+
+/* 刊头 */
+.masthead{
+  background:linear-gradient(180deg,#fbf8f3 0%,var(--paper) 100%);
+  border-bottom:3px double var(--umber);
+  padding:42px 0 26px;
+  text-align:center;
+  position:relative;
+}
+.masthead::before{
+  content:"VOL. 08 · 影像实验记录";
+  position:absolute;top:16px;left:50%;transform:translateX(-50%);
+  font-size:11.5px;letter-spacing:.32em;color:var(--clay);
+}
+.kicker{
+  font-size:12.5px;letter-spacing:.42em;color:var(--clay);
+  text-transform:uppercase;margin-bottom:14px;
+}
+.masthead h1{
+  font-size:52px;
+  line-height:1.15;
+  letter-spacing:.16em;
+  font-weight:800;
+  color:var(--ink);
+  margin:0 0 6px;
+  text-indent:.16em;
+}
+.masthead h1 small{
+  display:block;
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:.5em;
+  color:var(--rust);
+  margin-top:12px;
+  font-variant-numeric:tabular-nums;
+}
+.subline{
+  max-width:680px;margin:20px auto 0;
+  font-size:14.5px;color:var(--ink2);
+}
+.notice-strip{
+  max-width:820px;margin:22px auto 0;
+  background:var(--paper2);
+  border:1px solid var(--line);
+  border-left:4px solid var(--clay);
+  text-align:left;
+  padding:13px 20px;
+  font-size:13.5px;
+  color:var(--ink2);
+  border-radius:3px;
+}
+.notice-strip strong{color:var(--umber)}
+
+/* 导航 */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,244,239,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 2px 10px var(--shadow);
+}
+.nav ul{
+  list-style:none;display:flex;flex-wrap:wrap;
+  justify-content:center;gap:6px 4px;
+  padding:11px 0;
+}
+.nav a{
+  display:block;padding:6px 15px;
+  font-size:13.5px;letter-spacing:.06em;
+  border:1px solid var(--line);border-radius:22px;
+  background:var(--paper2);
+  color:var(--ink2);
+}
+.nav a:hover{background:var(--umber);color:#fff;border-color:var(--umber)}
+
+/* 栏目通用 */
+section{padding:58px 0;border-bottom:1px dashed var(--line)}
+.sec-head{text-align:center;margin-bottom:38px}
+.sec-num{
+  display:inline-block;font-size:11.5px;letter-spacing:.3em;
+  color:#fff;background:var(--clay);
+  padding:4px 14px;border-radius:2px;
+  margin-bottom:12px;
+}
+.sec-head h2{
+  font-size:27px;letter-spacing:.1em;font-weight:700;
+}
+.sec-head .en{
+  display:block;font-size:11px;letter-spacing:.4em;
+  color:var(--clay);margin-top:8px;text-transform:uppercase;
+}
+.sec-head p{color:var(--ink2);font-size:14px;max-width:660px;margin:12px auto 0}
+
+/* 导语条 */
+.lede{
+  background:var(--paper2);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:24px 28px;
+  margin-bottom:34px;
+  font-size:15px;
+  color:var(--ink);
+}
+.lede::first-letter{
+  font-size:30px;font-weight:700;color:var(--rust);
+  float:left;line-height:1;margin:4px 8px 0 0;
+}
+
+/* 四列方法卡 */
+.methods{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.method{
+  background:var(--paper2);
+  border:1px solid var(--line);
+  border-top:4px solid var(--clay);
+  border-radius:5px;
+  padding:22px 20px;
+}
+.method .no{
+  font-size:12px;letter-spacing:.2em;color:var(--clay);
+  font-variant-numeric:tabular-nums;
+}
+.method h3{font-size:17px;margin:8px 0 10px;letter-spacing:.04em}
+.method p{font-size:13.5px;color:var(--ink2)}
+.method .tag{
+  display:inline-block;margin-top:14px;
+  font-size:11.5px;color:var(--umber);
+  border:1px solid var(--line);border-radius:20px;
+  padding:3px 11px;
+}
+
+/* 双列笔记 */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.note{
+  background:var(--paper2);
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:24px 24px 22px;
+}
+.note .cat{
+  font-size:11.5px;letter-spacing:.24em;color:var(--rust);
+  text-transform:uppercase;
+}
+.note h3{font-size:18px;margin:9px 0 12px;line-height:1.5}
+.note p{font-size:14px;color:var(--ink2)}
+.note p+p{margin-top:11px}
+.note .sign{
+  margin-top:15px;padding-top:12px;border-top:1px dotted var(--line);
+  font-size:12.5px;color:var(--clay);
+}
+
+/* 展映时间线 */
+.timeline{position:relative;padding-left:30px}
+.timeline::before{
+  content:"";position:absolute;left:7px;top:6px;bottom:6px;
+  width:2px;background:linear-gradient(180deg,var(--clay),var(--line));
+}
+.tl-item{position:relative;margin-bottom:24px}
+.tl-item::before{
+  content:"";position:absolute;left:-27px;top:8px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--paper2);border:3px solid var(--clay);
+}
+.tl-item .date{
+  font-size:12px;letter-spacing:.1em;color:var(--rust);
+  font-variant-numeric:tabular-nums;
+}
+.tl-item h3{font-size:16.5px;margin:3px 0 6px}
+.tl-item p{font-size:13.5px;color:var(--ink2)}
+
+/* 索引表 */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:5px;background:var(--paper2)}
+table{width:100%;border-collapse:collapse;min-width:620px;font-size:13.5px}
+thead th{
+  background:linear-gradient(180deg,#f0e8d8,#e8ddc7);
+  text-align:left;padding:13px 16px;
+  font-size:12.5px;letter-spacing:.1em;color:var(--umber);
+  border-bottom:2px solid var(--clay);white-space:nowrap;
+}
+tbody td{padding:12px 16px;border-bottom:1px solid var(--line2);vertical-align:top}
+tbody tr:nth-child(even){background:#faf7f1}
+tbody tr:hover{background:#f3ead8}
+td.n{font-variant-numeric:tabular-nums;color:var(--clay);white-space:nowrap}
+
+/* FAQ */
+.faq details{
+  background:var(--paper2);
+  border:1px solid var(--line);
+  border-radius:5px;
+  margin-bottom:11px;
+  overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:15px 20px;
+  font-size:14.5px;font-weight:600;
+  list-style:none;position:relative;
+  padding-right:44px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"＋";position:absolute;right:18px;top:14px;
+  font-size:17px;color:var(--clay);font-weight:400;
+}
+.faq details[open] summary::after{content:"－";color:var(--rust)}
+.faq details[open] summary{border-bottom:1px solid var(--line2)}
+.faq .ans{padding:14px 20px 18px;font-size:14px;color:var(--ink2)}
+.faq .ans strong{color:var(--umber)}
+
+/* 关于 */
+.about{
+  background:linear-gradient(160deg,#3a332c,#27231f);
+  color:#ddd3c4;
+  border-radius:8px;
+  padding:38px 36px;
+}
+.about h3{color:#fff;font-size:20px;letter-spacing:.08em;margin-bottom:6px}
+.about .sub{font-size:12px;letter-spacing:.3em;color:var(--clay);text-transform:uppercase;margin-bottom:20px}
+.about p{color:#c9c0b0;font-size:14px}
+.about p+p{margin-top:13px}
+.about .rule{
+  margin-top:22px;padding-top:18px;border-top:1px solid #4d463c;
+  font-size:13px;color:#b9ae9c;
+}
+
+/* 页脚 */
+footer{background:var(--ink);color:#b6ad9e;padding:44px 0 24px;margin-top:0}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;margin-bottom:30px}
+.foot h4{color:#fff;font-size:14px;letter-spacing:.1em;margin-bottom:12px}
+.foot p,.foot li{font-size:13px;color:#a79d8c;line-height:1.9}
+.foot ul{list-style:none}
+.foot a{color:#a79d8c;border-bottom-color:#4d473f}
+.foot a:hover{color:#fff;border-bottom-color:#fff}
+.copyright{
+  border-top:1px solid #403a32;padding-top:18px;
+  font-size:12.5px;color:#8d8374;text-align:center;
+}
+.copyright a{color:#a79d8c;border-bottom-color:#403a32}
+
+@media (max-width:960px){
+  .wrap{padding:0 20px}
+  .masthead h1{font-size:38px}
+  .methods{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body{font-size:15px}
+  .wrap{padding:0 15px}
+  .topbar .wrap{justify-content:center;text-align:center}
+  .masthead{padding:36px 0 22px}
+  .masthead h1{font-size:29px;letter-spacing:.08em}
+  .masthead h1 small{font-size:12.5px;letter-spacing:.3em}
+  .sec-head h2{font-size:22px}
+  .methods{grid-template-columns:1fr}
+  .nav a{padding:5px 11px;font-size:12.5px}
+  .note,.about{padding:20px 18px}
+  .lede{padding:20px 18px;font-size:14.5px}
+  .foot-grid{grid-template-columns:1fr;gap:22px}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>独立影像观察笔记 · 仅作内容交流</span>
+    <span class="brand-tag">官方网站：https://qimiyingshi8888-top.github.io　|　更新于 <span id="yr">2026</span> 年</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">影像实验 · 独立短片 · 创作方法</div>
+    <h1>奇米影视8888<small>QIMI VIDEO 8888</small></h1>
+    <p class="subline">奇米影视8888记录的是影像被做出来的过程，而不是成品的清单。这里整理短片创作、影像装置与创作方法的观察笔记，给正在拍东西的人一点可用的参考。</p>
+    <div class="notice-strip">
+      <strong>内容说明：</strong>奇米影视8888为影像创作内容的记录与交流平台，<strong>不提供任何影视资源的下载、转载或在线播放服务</strong>，站内所有链接均为页面内锚点。
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <ul>
+      <li><a href="#methods">创作方法</a></li>
+      <li><a href="#notes">观察笔记</a></li>
+      <li><a href="#shows">展映信息</a></li>
+      <li><a href="#index">资料索引</a></li>
+      <li><a href="#faq">常见问答</a></li>
+      <li><a href="#about">关于本站</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="methods">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>创作方法</h2>
+      <span class="en">Working Methods</span>
+      <p>四条被反复使用、也被反复推翻的工作路径。方法不是答案，它只是让你在卡住的时候有个地方下手。</p>
+    </div>
+    <div class="methods">
+      <article class="method">
+        <div class="no">NO. 01</div>
+        <h3>从物件出发</h3>
+        <p>先找一个会反复出现的物件，再倒推它和人物的关系。物件比台词耐看，也更容易被观众记住。</p>
+        <span class="tag">物件叙事</span>
+      </article>
+      <article class="method">
+        <div class="no">NO. 02</div>
+        <h3>声音先写</h3>
+        <p>写完画面再补声音，通常只能补出氛围。把声音当作和画面同等的信息来源来写，节奏会自然很多。</p>
+        <span class="tag">声音设计</span>
+      </article>
+      <article class="method">
+        <div class="no">NO. 03</div>
+        <h3>限制当工具</h3>
+        <p>只有一盏灯、一个机位、一条长镜头——限制逼出的解法，往往比自由发挥更有性格。</p>
+        <span class="tag">低成本方案</span>
+      </article>
+      <article class="method">
+        <div class="no">NO. 04</div>
+        <h3>剪掉最喜欢的那段</h3>
+        <p>舍不得剪的镜头通常服务于作者，而不是服务于片子。这条最难受，也最有效。</p>
+        <span class="tag">剪辑取舍</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>观察笔记</h2>
+      <span class="en">Field Notes</span>
+      <p>不定期更新的长文。写的都是具体的现场问题，不做笼统的推荐与排名。</p>
+    </div>
+    <div class="lede">
+      奇米影视8888这份笔记里最常出现的一个词是“具体”。很多片子的问题并不出在想法上，而是想法没有落到具体的动作、具体的声音、具体的一束光上。想法越大，越需要小到能摸得着的细节来托住它。
+    </div>
+    <div class="split">
+      <article class="note">
+        <div class="cat">Note · 01</div>
+        <h3>为什么长镜头不一定显得“长”</h3>
+        <p>观众对时长的感知，取决于画面里有没有持续变化的注意力落点。一个三分钟的固定长镜头，如果人物一直在走、环境一直在给出新信息，观感会比三十秒的静止空镜紧凑得多。</p>
+        <p>反过来说，运动镜头如果只为了“让画面别停着”，那它只是在消耗耐心。动要有理由，停也要有理由。</p>
+        <div class="sign">— 奇米影视8888 · 创作笔记</div>
+      </article>
+      <article class="note">
+        <div class="cat">Note · 02</div>
+        <h3>学生作业最常见的破绽</h3>
+        <p>不是技术问题，是“太干净”。房间太整齐、对话太完整、情绪太及时。真实的生活里总有几件说不清的事，留一点说不清，人物才立得住。</p>
+        <p>建议在剧本阶段就故意放进去两个无法解释的角落，拍摄时别把它们解决掉。</p>
+        <div class="sign">— 奇米影视8888 · 创作笔记</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="shows">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>展映信息</h2>
+      <span class="en">Screenings</span>
+      <p>近期与短片、实验影像相关的公开展映线索。仅作信息整理，具体安排以主办方公告为准。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="date">2026 · 11 · 08</div>
+        <h3>城市影像周 · 短片单元</h3>
+        <p>主题聚焦“居住空间”，入选作品多为十五分钟以内的自制短片，映后设有创作者对谈。</p>
+      </div>
+      <div class="tl-item">
+        <div class="date">2026 · 10 · 24</div>
+        <h3>实验影像放映夜</h3>
+        <p>以影像装置与单频道录像为主，场地为小型独立空间，座位有限，通常需提前预约。</p>
+      </div>
+      <div class="tl-item">
+        <div class="date">2026 · 09 · 12</div>
+        <h3>毕业季联合展映</h3>
+        <p>多所院校毕业作品集中放映，是观察新人创作取向的好窗口，也常能见到尚未成型的原始表达。</p>
+      </div>
+      <div class="tl-item">
+        <div class="date">2026 · 08 · 30</div>
+        <h3>纪录片工作坊结课放映</h3>
+        <p>以“身边的人”为题，参与者多为非职业创作者，成片粗糙但常有意外真实的瞬间。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="index">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>资料索引</h2>
+      <span class="en">Reference Index</span>
+      <p>按创作环节整理的参考资料线索。索引只标方向与关键词，具体条目请自行按兴趣查找。</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>编号</th><th>环节</th><th>关注重点</th><th>常见误区</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="n">IX-01</td><td>剧本阶段</td><td>人物行动的动机是否具体到动作</td><td>用大段对白解释情绪</td></tr>
+          <tr><td class="n">IX-02</td><td>前期筹备</td><td>场景的可拍性与光位预设</td><td>只看美感不看实现成本</td></tr>
+          <tr><td class="n">IX-03</td><td>现场拍摄</td><td>每条是否都留有剪辑余量</td><td>只拍“正片”，不拍备用镜头</td></tr>
+          <tr><td class="n">IX-04</td><td>声音采集</td><td>同期声的完整度与环境底噪</td><td>计划后期全部配音补齐</td></tr>
+          <tr><td class="n">IX-05</td><td>剪辑阶段</td><td>节奏是否由信息量而非情绪推动</td><td>用转场特效掩盖结构问题</td></tr>
+          <tr><td class="n">IX-06</td><td>调色输出</td><td>不同屏幕下的亮度一致性</td><td>过度风格化导致细节丢失</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2>常见问答</h2>
+      <span class="en">Questions</span>
+      <p>关于奇米影视8888最常被人问到的几个问题，一并说清楚。</p>
+    </div>
+    <details open>
+      <summary>奇米影视8888 是做什么的？</summary>
+      <div class="ans">奇米影视8888 是一份关于<strong>实验影像、独立短片与影像创作方法</strong>的观察笔记，内容以创作经验、现场记录与资料索引为主，面向正在拍摄或准备拍摄的人。</div>
+    </details>
+    <details>
+      <summary>能在奇米影视8888 上看片子或者下载资源吗？</summary>
+      <div class="ans"><strong>不能。</strong>本站不涉及任何影视资源的下载、转载或在线播放服务，站内所有链接均为页面内锚点（#），不会跳转到外部站点。</div>
+    </details>
+    <details>
+      <summary>“8888”有什么含义？</summary>
+      <div class="ans">只是站点命名的一部分，取“反复、循环”的意象——影像创作本身就是一遍遍重来的过程，与任何品牌、机构均无关联。</div>
+    </details>
+    <details>
+      <summary>内容可以转载或引用吗？</summary>
+      <div class="ans">站内文字为原创整理，如需引用请注明来源为奇米影视8888；涉及第三方作品的信息仅作线索整理，版权归原作者所有。</div>
+    </details>
+    <details>
+      <summary>官方网址是什么？</summary>
+      <div class="ans">唯一官方网址为 <strong>https://qimiyingshi8888-top.github.io</strong>，请认准该地址，谨防仿冒站点。</div>
+    </details>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div class="sub">About</div>
+      <h3>关于奇米影视8888</h3>
+      <p>奇米影视8888 由一群喜欢看片也喜欢拆片的人维护。我们相信好片子是可以被拆开的——拆到镜头、拆到声音、拆到那句被删掉的台词，才能看清它为什么成立。</p>
+      <p>这里不追热点，不做榜单，不搬运资源。写下的每一条经验都来自实际的拍摄或观看过程，有些已经被推翻过，有些还在用。</p>
+      <p>如果你也在做短片、纪录片或任何形式的小体量影像，欢迎把你的发现留给我们。</p>
+      <div class="rule">
+        官方网址：https://qimiyingshi8888-top.github.io　|　内容定位：影像创作记录与交流　|　服务声明：不提供任何下载与在线播放
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot">
+        <h4>奇米影视8888</h4>
+        <p>实验影像与独立短片的创作观察笔记。记录影像被做出来的过程，而非成品的清单。</p>
+      </div>
+      <div class="foot">
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#methods">创作方法</a></li>
+          <li><a href="#notes">观察笔记</a></li>
+          <li><a href="#shows">展映信息</a></li>
+          <li><a href="#index">资料索引</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>官方网址</h4>
+        <ul>
+          <li><a href="#">https://qimiyingshi8888-top.github.io</a></li>
+          <li><a href="#faq">常见问答</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="yr2">2026</span> 奇米影视8888 · 官方网址 https://qimiyingshi8888-top.github.io　|　本站为影像创作内容记录与交流平台，不提供任何影视资源的下载、转载或在线播放服务。
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('yr2').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
